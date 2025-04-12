@@ -4,39 +4,37 @@
 
 ---
 
-##  Features
+## Features
 
--  **StudyBuddy Chatbot**  
+- **StudyBuddy Chatbot**  
   Ask questions and get accurate, contextual responses from your study material or general knowledge.
 
--  **PDF & Document Ingestion**  
-  Upload your textbooks, notes, or slides. Brainverse reads and understands them instantly.
+- **Mind Map Generator**  
+  Visualize complex concepts and topics with AI-generated mind maps that break down your content into digestible nodes.
 
--  **Question Suggestion Engine**  
-  Automatically generates relevant quiz and exam-style questions from your uploaded materials.
+- **PDF & YouTube Summarization**  
+  Upload a PDF or paste a YouTube link – Brainverse summarizes the content to help you grasp key points faster.
 
--  **Smart Querying Interface**  
-  Find specific information or get summaries from any section of your documents.
-
--  **Citations & References**  
-  Every answer is traceable with proper references from the source material.
+- **Flashcards & Quizzes**  
+  Instantly generate flashcards and quiz questions from your documents to practice and retain knowledge.
 
 ---
 
 ##  Tech Stack
 
-| Frontend     | Backend        | AI/NLP Services    | Database     | Other Tools      |
-|--------------|----------------|--------------------|--------------|------------------|
-| React.js  | Node.js / Express | Gemini 1.5 Pro API |  MongoDB     | Tailwind CSS, Vite |
+| Frontend     | Backend        | AI/NLP Services    | Database     | Other Tools         |
+|--------------|----------------|--------------------|--------------|---------------------|
+| React.js     | Node.js / Express | Gemini 1.5 Pro API | MongoDB      | Tailwind CSS, Vite  |
 
 ---
 
-##  Use Cases
+## Use Cases
 
--  Students preparing for exams with large volumes of material
--  Self-learners who want on-demand tutoring
--  Quick summarization and comprehension of PDFs
--  Quiz and test generation for practice
+- Students preparing for exams with large volumes of material
+- Self-learners who want on-demand tutoring
+- Quick summarization and comprehension of PDFs & YouTube videos
+- Flashcard-based and quiz-based revision
+- Visual learners who benefit from mind maps
 
 ---
 
@@ -46,3 +44,4 @@
    ```bash
    git clone https://github.com/arushi-866/brainVerse.git
    cd brainverse
+
