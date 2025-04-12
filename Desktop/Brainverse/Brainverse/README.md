@@ -10,18 +10,6 @@
 - **StudyBuddy Chatbot**  
   Ask questions and get accurate, contextual responses from your study material or general knowledge.
 
-- **PDF & Document Ingestion**  
-  Upload your textbooks, notes, or slides. Brainverse reads and understands them instantly.
-
-- **Question Suggestion Engine**  
-  Automatically generates relevant quiz and exam-style questions from your uploaded materials.
-
-- **Smart Querying Interface**  
-  Find specific information or get summaries from any section of your documents.
-
-- **Citations & References**  
-  Every answer is traceable with proper references from the source material.
-
 - **Mind Map Generator**  
   Visualize complex concepts and topics with AI-generated mind maps that break down your content into digestible nodes.
 
