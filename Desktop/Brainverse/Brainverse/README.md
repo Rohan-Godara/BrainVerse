@@ -5,7 +5,7 @@
 
 ---
 
-## 🚀 Features
+##  Features
 
 - **StudyBuddy Chatbot**  
   Ask questions and get accurate, contextual responses from your study material or general knowledge.
@@ -33,7 +33,7 @@
 
 ---
 
-## 🧠 Tech Stack
+##  Tech Stack
 
 | Frontend     | Backend        | AI/NLP Services    | Database     | Other Tools         |
 |--------------|----------------|--------------------|--------------|---------------------|
@@ -41,7 +41,7 @@
 
 ---
 
-## 🎯 Use Cases
+##  Use Cases
 
 - Students preparing for exams with large volumes of material
 - Self-learners who want on-demand tutoring
@@ -51,7 +51,7 @@
 
 ---
 
-## 💻 How to Run Locally
+##  How to Run Locally
 
 1. Clone the repo:
    ```bash
