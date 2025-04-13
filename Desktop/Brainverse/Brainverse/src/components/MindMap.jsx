@@ -11,7 +11,7 @@ import ReactFlow, {
   MarkerType
 } from "reactflow";
 import "reactflow/dist/style.css";
-import { Loader, Zap, FileText, Brain, Download, Share2, GitBranch, Info, Award, Sparkles, Camera, Check } from "lucide-react";
+import { Loader, Zap, FileText, Brain, Download, Share2, GitBranch, Info, Award, Sparkles, Camera, Check, Save } from "lucide-react";
 import axios from "axios";
 import { toPng } from 'html-to-image';
 import { Handle, Position } from 'reactflow';
@@ -197,6 +197,37 @@ function MindMap() {
   const reactFlowWrapper = useRef(null);
   const fullscreenRef = useRef(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const userData = JSON.parse(localStorage.getItem("user"));
+  const userId = userData?.id;
+
+  const [inputTitle, setInputTitle] = useState("");
+  const [inputNodes, setInputNodes] = useState(0);
+
+  const saveMindMapToDB = async () => {
+    if (!userId || nodes.length === 0) {
+      alert("Missing user ID or empty mind map");
+      return;
+    }
+
+    try {
+      const mindMap = {
+        id: Date.now(),
+        title: inputText.slice(0, 50) || "Untitled Mind Map",
+        date: new Date().toISOString().split("T")[0],
+        nodes: nodes.length
+      };
+
+      await axios.post(`${API_URL}/api/mindmap/add-mindmap`, {
+        userId,
+        mindMap
+      });
+
+      alert("Mind map saved to your dashboard!");
+    } catch (error) {
+      console.error("Error saving mind map:", error);
+      alert("Failed to save mind map to database");
+    }
+  };
 
 
 
@@ -459,7 +490,7 @@ function MindMap() {
       })
         .then((dataUrl) => {
           const link = document.createElement('a');
-          link.download = 'neural-mind-map.png';
+          link.download = 'mind-map.png';
           link.href = dataUrl;
           link.click();
           setDownloadStatus("success");
@@ -701,7 +732,7 @@ function MindMap() {
             >
               <span className="flex items-center">
                 <Brain className="mr-2 text-blue-400" />
-                Gemini Neural Mapper
+                Generate your mind map
               </span>
             </motion.h1>
 
@@ -841,6 +872,16 @@ function MindMap() {
                     />
                   )}
                 </div>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={saveMindMapToDB}
+                  disabled={nodes.length === 0}
+                  className="w-full mt-2 bg-blue-800 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
+                >
+                  <Save className="mr-2 inline-block h-4 w-4" />
+                  Save Mind Map
+                </motion.button>
 
               </div>
 
@@ -1030,9 +1071,9 @@ function MindMap() {
                     className="bg-blue-900/90 rounded-xl p-6 max-w-md text-center shadow-2xl border border-blue-600/50"
                   >
                     <Brain className="h-12 w-12 mx-auto mb-4 text-blue-400" />
-                    <h3 className="text-xl font-bold text-blue-200 mb-2">Neural Mind Mapper</h3>
+                    <h3 className="text-xl font-bold text-blue-200 mb-2">Mind Map</h3>
                     <p className="text-blue-300 mb-4">
-                      Enter text or upload a document in the left panel to generate a mind map powered by Gemini AI. Visualize concepts as an interactive neural network!
+                      Enter text or upload a document in the left panel to generate a mind map powered by Gemini AI. 
                     </p>
                     <div className="grid grid-cols-2 gap-3 mt-4">
                       <motion.div
@@ -1065,7 +1106,7 @@ function MindMap() {
           className="mt-8 text-center text-blue-400/80 text-sm"
         >
           <motion.div variants={itemVariants}>
-            Gemini Neural Mapper © 2025 — Built for the AI Innovation Hackathon
+           
           </motion.div>
         </motion.footer>
       </div>
