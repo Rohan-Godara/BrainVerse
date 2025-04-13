@@ -2,37 +2,37 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import arushi from '../assets/arushi.png'; 
 import soumil from '../assets/soumil.png'; 
-import sanyam from '../assets/sanyam.png';
+import abhinav from '../assets/abhinav.png';
 import aditya from '../assets/aditya.png' 
 
 const developers = [
   {
     name: "Arushi",
     role: "Team Leader and Frontend Developer",
-    bio: "[Short bio about the developer's experience and contributions]",
+    bio: "Creative frontend developer passionate about crafting elegant UIs using React, Tailwind CSS, and Framer Motion. Loves translating ideas into smooth, interactive web experiences.",
     image: arushi, // Placeholder image
     skills: ["React", "Express.Js", "Tailwind CSS"]
   },
   {
     name: "Soumil",
     role: "Frontend Developer",
-    bio: "[Short bio about the developer's experience and contributions]",
+    bio: "Detail-oriented UI engineer with a flair for pixel-perfect design. Experienced in building responsive interfaces using HTML, CSS, JavaScript, and Next.js.",
     image:soumil, // Placeholder image
     skills: ["React", "Tailwind CSS"]
   },
 
   {
-    name: "Sanyam",
+    name: "Aditya",
     role: "Backend Engineer",
-    bio: "[Short bio about the developer's experience and contributions]",
-    image: sanyam, // Placeholder image
+    bio: "Backend developer skilled in building robust RESTful APIs with Node.js, Express, and MongoDB. Focused on performance, security, and clean architecture.",
+    image: aditya, // Placeholder image
     skills: ["Node.js", "FastAPI", "MongoDB"]
   },
   {
-    name: "Aditya",
+    name: "Abhinav",
     role: "AI Specialist",
-    bio: "[Short bio about the developer's experience and contributions]",
-    image: aditya, // Placeholder image
+    bio: "Backend-focused full stack dev with experience in authentication, database design, and cloud deployment. Fluent in MongoDB, Express, and integrating AI APIs.",
+    image: abhinav, // Placeholder image
     skills: ["TensorFlow", "PyTorch", "NLP"]
   },
 ];
@@ -78,10 +78,9 @@ const features = [
 const technologies = [
   { name: "React.js", icon: "⚛️" },
   { name: "Node.js", icon: "🟢" },
-  { name: "FastAPI", icon: "🚀" },
-  { name: "TensorFlow", icon: "📊" },
-  { name: "PyTorch", icon: "🔥" },
-  { name: "Spheron", icon: "🌐" }
+  { name: "GeminiAPI", icon: "🚀" },
+  { name: "MongoDB", icon: "📊" },
+
 ];
 
 const cardVariants = {
